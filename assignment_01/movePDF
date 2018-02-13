@@ -1,0 +1,7 @@
+#!/bin/bash
+
+shopt -s dotglob
+
+for filename in *.PDF; do
+    mv "$filename" "${filename%.*}.pdf"
+done
