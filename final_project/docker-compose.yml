@@ -1,0 +1,8 @@
+version: '3'
+services: 
+  linux:
+    image: dsifford/s3fs
+    build: ./
+    volumes:
+      - ./src:/src
+    command: tail -f /dev/null
