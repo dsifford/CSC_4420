@@ -19,9 +19,3 @@ RUN apt-get update \
         pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
-RUN git clone https://github.com/s3fs-fuse/s3fs-fuse \
-    && cd s3fs-fuse \
-    && ./autogen.sh \
-    && ./configure --prefix=/usr --with-openssl \
-    && make \
-    && make install

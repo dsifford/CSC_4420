@@ -1,0 +1,3 @@
+[submodule "final_project/src/s3fs-fuse"]
+	path = final_project/src/s3fs-fuse
+	url = https://github.com/dsifford/s3fs-fuse.git
