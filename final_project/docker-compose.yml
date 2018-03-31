@@ -4,5 +4,11 @@ services:
     image: dsifford/s3fs
     build: ./
     volumes:
-      - ./src:/src
+        - ./src:/src
+        - /lib/modules:/lib/modules:ro
+    env_file: 
+        - .env
     command: tail -f /dev/null
+    privileged: true
+    cap_add:
+        - ALL

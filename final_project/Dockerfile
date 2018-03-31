@@ -19,3 +19,5 @@ RUN apt-get update \
         pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
+WORKDIR /src
+
