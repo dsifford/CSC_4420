@@ -1,11 +1,14 @@
 # Contents
 
-[Introduction](#introduction) [Project Goal](#project-goal)
-[System Information](#system-information)
-[Packages and Tools](#packages-and-tools)
-[Compiling and Running](#compiling-and-running) [Design](#design)
-[Integration](#integration) [Future Improvement](#future-improvement)
-[Summary](#summary)
+*   [Introduction](#introduction) 
+*   [Project Goal](#project-goal)
+*   [System Information](#system-information)
+*   [Packages and Tools](#packages-and-tools)
+*   [Compiling and Running](#compiling-and-running)
+*   [Design](#design)
+*   [Integration](#integration) 
+*   [Future Improvement](#future-improvement)
+*   [Summary](#summary)
 
 ## Introduction
 
