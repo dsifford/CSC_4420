@@ -4,6 +4,15 @@
 
 #include "rc4.h"
 
+// This function reads the entire file described by file descriptor "fd" to a
+// local buffer.
+//
+// If the content of the file is not encrypted, it is encrypted into an RC4
+// cipher. Conversely, if the content is encrypted, the ciphertext is decrypted
+// back into its original form.
+//
+// The output of the encryption/decryption is then written back into the
+// original file described by "fd".
 int transform_rc4(int fd) {
 	RC4_KEY key;
 	off_t offset = lseek(fd, 0, SEEK_END);
