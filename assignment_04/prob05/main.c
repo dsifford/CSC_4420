@@ -5,14 +5,14 @@
 #include <fcntl.h>
 #include <unistd.h>
 
-/** 
+/**
  * Write a program that reverses the bytes of a file, so that the last byte is
  * now first and the first byte is now last. It must work with an arbitrarily
  * long file, but try to make it reasonably efficient.
  **/
 
-int main(int argc, char *argv[]) {
-	
+int main(int argc, char *argv []) {
+
 	int fd;
 	off_t offset;
 
@@ -33,22 +33,21 @@ int main(int argc, char *argv[]) {
 	char *input_buffer = malloc(sizeof(char) * offset);
 	char *output_buffer = malloc(sizeof(char) * offset);
 
-	
 	if (lseek(fd, 0, SEEK_SET) == -1) {
 		perror("Error resetting file offset");
 		exit(EXIT_FAILURE);
 	}
 
-	if (read(fd, input_buffer, offset) == -1)	{
+	if (read(fd, input_buffer, offset) == -1) {
 		perror("Error reading file");
 		exit(EXIT_FAILURE);
 	}
-	
+
 	if (close(fd) == -1) {
 		perror("Error closing file");
 		exit(EXIT_FAILURE);
 	}
-	
+
 	off_t i = 0;
 	while (i <= offset) {
 		output_buffer[i] = input_buffer[offset - (i + 1)];
